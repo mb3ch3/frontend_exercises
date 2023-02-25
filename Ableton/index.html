@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+    <!-- importing boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- import gfont jost -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="overlay-nav" id="hidden_nav">
+            <div class="hidnav">
+                <div class="hidnav-nav">
+                    <div class="nav-item">live</div>
+                    <div class="nav-item">push</div>
+                    <div class="nav-item">note</div>
+                    <div class="nav-item">link</div>
+                    <div class="nav-item">shop</div>
+                    <div class="nav-item">packs</div>
+                    <div class="nav-item">help</div>
+                </div>
+                <div class="more-info">
+                    <div class="top-info">
+                        <div class="heading">More on Ableton.com:</div>
+                        <div class="items">
+                            <div class="item">Blog</div>
+                            <div class="item">Ableton for the Classroom</div>
+                            <div class="item">Ableton for Colleges and Universities</div>
+                            <div class="item">Certified Training</div>
+                            <div class="item" id="about" onclick="setSelected('about')">About Ableton</div>
+                            <div class="item">Jobs</div>
+                            <div class="item">Apprenticeships</div>
+                        </div>
+                    </div>
+                    <div class="bottom-info">
+                        <div class="heading">More from Ableton:</div>
+                        <div class="sub-contents">
+                            <div class="sub-content">
+                                <div class="sub-heading">Loop</div>
+                                <div class="contents">
+                                    Watch Talks, Performances and Features from Ableton's Summit for Music Makers
+                                </div>
+                            </div>
+                            <div class="sub-content">
+                                <div class="sub-heading">Learning Music</div>
+                                <div class="contents">
+                                    Learn the fundamentals of music making right in your browser.
+                                </div>
+                            </div>
+                            <div class="sub-content">
+                                <div class="sub-heading">Learning Synths</div>
+                                <div class="contents">
+                                    Get started with synthesis using a web-based synth and accompanying lessons.
+                                </div>
+                            </div>
+                            <div class="sub-content">
+                                <div class="sub-heading">Making Music</div>
+                                <div class="contents">
+                                    Some tips from 74 Creative Strategies for Electronic Producers.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <nav class="main-nav">
+                <div class="before-drop">
+                    <div class="logo">
+                        <span>
+                            <i class='bx bx-menu'></i>
+                        </span>
+                        <i class='bx bx-menu'></i>
+                    </div>
+                    <div class="nav-item ham" onclick="shownav()">Menu <span><i class='bx bx-caret-down'></i></span>
+                    </div>
+
+                    <div class="nav-items">
+                        <div class="nav-item">live</div>
+                        <div class="nav-item">push</div>
+                        <div class="nav-item">note</div>
+                        <div class="nav-item">link</div>
+                        <div class="nav-item">shop</div>
+                        <div class="nav-item">packs</div>
+                        <div class="nav-item">help</div>
+                        <div class="nav-item" id="more" onclick="toggleshow()">more
+                            <span id="icon">
+                                <i class='bx bx-plus'></i>
+                            </span>
+                            <span id="icon2">
+                                <i class='bx bx-minus'></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="logins">
+                        <div class="try">Try Live for Free</div>
+                        <div class="login">Login or Register</div>
+                    </div>
+                </div>
+                <div class="dropdown" id="dropdown">
+                    <div class="more-info">
+                        <div class="top-info">
+                            <div class="heading">More on Ableton.com:</div>
+                            <div class="items">
+                                <div class="item">Blog</div>
+                                <div class="item">Ableton for the Classroom</div>
+                                <div class="item">Ableton for Colleges and Universities</div>
+                                <div class="item">Certified Training</div>
+                                <div class="item" id="about" onclick="setSelected('about')">About Ableton</div>
+                                <div class="nav-item" onclick="setSelected('jobs')">jobs</div>
+                                <div class="nav-item" onclick="setSelected('apprentice')">apprenticeships</div>
+                            </div>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="heading">More from Ableton:</div>
+                            <div class="sub-contents">
+                                <div class="sub-content">
+                                    <div class="sub-heading">Loop</div>
+                                    <div class="contents">
+                                        Watch Talks, Performances and Features from Ableton's Summit for Music Makers
+                                    </div>
+                                </div>
+                                <div class="sub-content">
+                                    <div class="sub-heading">Learning Music</div>
+                                    <div class="contents">
+                                        Learn the fundamentals of music making right in your browser.
+                                    </div>
+                                </div>
+                                <div class="sub-content">
+                                    <div class="sub-heading">Learning Synths</div>
+                                    <div class="contents">
+                                        Get started with synthesis using a web-based synth and accompanying lessons.
+                                    </div>
+                                </div>
+                                <div class="sub-content">
+                                    <div class="sub-heading">Making Music</div>
+                                    <div class="contents">
+                                        Some tips from 74 Creative Strategies for Electronic Producers.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </nav>
+
+            <nav>
+                <div class="sub-nav-items sub-nav">
+                    <div class="nav-item" id="about" onclick="setSelected('about')">about</div>
+                    <div class="nav-item" id="jobs" onclick="setSelected('jobs')">jobs</div>
+                    <div class="nav-item" id="apprentice" onclick="setSelected('apprentice')">apprenticeships</div>
+                </div>
+            </nav>
+        </header>
+        <section id="about-content">
+            <div>
+                <div class="topsection">
+                    <div class="test">
+                        <img src="./assets/img/pic1.jpg" />
+                        <div class="brand">ableton</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="intro-text">
+                <div class="intro-bold">
+                    We make <span>Live</span>, <span>Push</span> <span>Live</span>, and — unique software and hardware
+                    for
+                    music creation and performance. With these products, our community of users creates amazing things.
+                </div>
+                <div class="intro-reg">
+                    Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by
+                    a
+                    community of dedicated musicians, sound designers, and artists from across the world.
+                </div>
+            </div>
+
+            <div class="gallery1">
+                <img class="big-image" src="/assets/img/pic3.jpg" alt="">
+
+                <div class="backsplash">
+                    <img class="small-image" src="/assets/img/pic2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="intro-text">
+                <div class="intro-bold">
+                    Making music isn’t easy. It takes time, effort, and learning. But when you’re in the flow, it’s
+                    incredibly rewarding.
+                </div>
+                <div class="intro-reg">
+                    We feel the same way about making Ableton products. The driving force behind Ableton is our passion
+                    for
+                    what we make, and the people we make it for.
+                </div>
+            </div>
+
+            <div style="margin: 5vh 0">
+                <div class="video1">
+                    <video id="vid" src="/assets/vid/video.mp4"></video>
+                    <i id="play" class='bx bx-play-circle'></i>
+                    <div class="caption">Why Ableton - Juanpe Bolivar</div>
+                </div>
+            </div>
+
+            <div class="intro-text">
+                <div class="intro-bold">
+                    We are more than 350 people from 30 different countries divided between our headquarters in Berlin
+                    and our offices in Los Angeles and Tokyo.
+                </div>
+                <div class="intro-reg">
+                    Most of us are active musicians, producers, and DJs, and many of us use Live and Push every day. We
+                    come from a wide range of cultural and professional backgrounds. Some of us have PhDs, some are
+                    self-taught, and most of us are somewhere in between. What connects us is the shared belief that
+                    each of us has the skills and knowledge to contribute to something big: helping to shape the future
+                    of music culture.
+                </div>
+            </div>
+
+            <div class="gallery2">
+                <img class="big-image2" src="/assets/img/pic6.jpg" alt="">
+
+                <div class="backsplash2">
+                    <img class="small-image12" src="/assets/img/pic4.jpg" alt="">
+                    <img class="small-image12" src="/assets/img/pic5.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="intro-text">
+                <div class="intro-bold">
+                    We believe it takes focus to create truly outstanding instruments. We only work on a few products
+                    and we strive to make them great.
+                </div>
+                <div class="intro-reg">
+                    Rather than having a one-size-fits-all process, we try to give our people what they need to work
+                    their magic and grow. We’ve learned that achieving the best results comes from building teams that
+                    are richly diverse, and thus able to explore problems from a wider set of perspectives. We don’t
+                    always agree with each other, but opinion and debate are valued and openly encouraged.
+                </div>
+            </div>
+
+            <div>
+                <div class="topsection">
+                    <div class="test">
+                        <img src="./assets/img/pic7.jpg" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="intro-text">
+                <div class="intro-bold">
+                    We’re passionate about what we do, but we’re equally passionate about improving who we are.
+                </div>
+                <div class="intro-reg">
+                    We work hard to foster an environment where people can grow both personally and professionally, and
+                    we strive to create a wealth of opportunities to learn from and with each other.
+                </div>
+                <div class="intro-reg">
+                    Alongside an internal training program, employees are actively supported in acquiring new knowledge
+                    and skills, and coached on applying these in their daily work. In addition, staff-organized
+                    development and music salons are a chance to discuss new technologies, production techniques and
+                    best practices.
+                </div>
+            </div>
+
+            <div class="gallery3">
+                <div class="backsplash3">
+                </div>
+                <div class="g3-images">
+                    <img class="big-image3" src="/assets/img/pic8.jpg" alt="">
+                    <img class="small-image13" src="/assets/img/pic9.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="intro-text">
+                <div class="intro-bold">
+                    We want our employees to love it here. Since we’re looking for exceptional talent from around the
+                    world, we will do everything we can to make your transition as easy as possible.
+                </div>
+                <div class="intro-reg">
+                    If you're joining us in Berlin, we'll help with relocation and paperwork. We’ll even provide you
+                    with free German or English lessons. Plus, working in Germany means you can expect comprehensive
+                    health insurance for you and your family, as well as generous maternity and paternity leave. Office
+                    hours are flexible, but it’s not all work; we have several company and team outings throughout the
+                    year as well as a variety of fun, informal small-group activities.
+                </div>
+            </div>
+
+            <div class="gallery4">
+                <img class="g4-image" src="/assets/img/pic8.jpg" alt="">
+                <div class="g4-text">
+                    <div class="">
+                        We’re really proud of the work we’ve done so far. But there’s so much more to come. If you’d
+                        like to
+                        be a part of it, please join us.
+                        <br>
+                        <a href="" class="try">See latest jobs <i class='bx bx-chevron-right'></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr class="line">
+
+            <footer>
+                <div class="footer">
+                    <div class="footer-title">Ableton</div>
+                    <div class="footer-top-row">
+                        <div class="footer-link-group">
+                            <a class="footer-link-item" href="">Register Live or Push<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">About Ableton<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">Jobs<i class='bx bx-chevron-right'></i></a>
+                            <div class="social-links">
+                                <i class='bx bxl-facebook-circle'></i>
+                                <i class='bx bxl-twitter'></i>
+                                <i class='bx bxl-youtube'></i>
+                                <i class='bx bxl-instagram'></i>
+                            </div>
+                        </div>
+                        <div class="footer-link-group">
+                            <div class="footer-link-group-title">Education</div>
+                            <a class="footer-link-item" href="">Offers for students and teachers<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">Ableton for the Classroom<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">Ableton for Colleges and Universities<i class='bx bx-chevron-right'></i></a>
+                        </div>
+                        <div class="footer-link-group">
+                            <div>
+                                <div class="footer-link-group-title">Sign up to our newsletter</div>
+                                <p>Enter your email address to stay up to date with the latest offers, tutorials, downloads, surveys and more.</p>
+                            </div>
+                            <div class="email">
+                                <input type="email" name="" id="" placeholder="Email Address">
+                                <input type="button" value="sign up">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom-row">
+                        <div class="footer-link-group">
+                            <div class="footer-link-group-title">Community</div>
+                            <a class="footer-link-item" href="">Find Ableton User Groups<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">Find Certified Training<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">Become a Certified Trainer<i class='bx bx-chevron-right'></i></a>
+                        </div>
+                        <div class="footer-link-group">
+                            <div class="footer-link-group-title">Distributors</div>
+                            <a class="footer-link-item" href="">Find Distributors<i class='bx bx-chevron-right'></i></a>
+                            <a class="footer-link-item" href="">Try Push in-store<i class='bx bx-chevron-right'></i></a>
+                        </div>
+                        <div class="footer-link-group">
+                            <div class="footer-link-group-title">Language and Location</div>
+                            <div class="langloc">
+                                <select name="lang" id="">
+                                    <option value="1">English</option>
+                                    <option value="1">English</option>
+                                    <option value="1">English</option>
+                                    <option value="1">English</option>
+                                </select>
+                                <select name="lang" id="">
+                                    <option value="1">English</option>
+                                    <option value="1">English</option>
+                                    <option value="1">English</option>
+                                    <option value="1">English</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
+    </section>
+    <section id="job-content">
+        jobs
+    </section>
+    <section id="apprentice-content">
+        apprentice
+    </section>
+
+
+    </div>
+    <script>
+        const selected = 'about'
+        const abouts = document.querySelectorAll('#about');
+        const jobs = document.getElementById('jobs');
+        const apprentice = document.getElementById('apprentice');
+
+        const abcontent = document.getElementById('about-content')
+        const jbcontent = document.getElementById('job-content')
+        const appcontent = document.getElementById('apprentice-content')
+
+        const play = document.getElementById('play')
+        const vid = document.getElementById('vid')
+
+        var more = document.getElementById('more')
+        var plus = document.getElementById('icon')
+        var minus = document.getElementById('icon2')
+        var dropdown = document.getElementById('dropdown')
+        var hidden_nav = document.getElementById('hidden_nav')
+        function toggleshow() {
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none'
+                plus.style.display = 'inline'
+                minus.style.display = 'none'
+            } else {
+                dropdown.style.display = 'block'
+                plus.style.display = 'none'
+                minus.style.display = 'inline'
+            }
+        }
+        function shownav() {
+            if (hidden_nav.style.display === 'inline') {
+                hidden_nav.style.display = 'none'
+            } else {
+                hidden_nav.style.display = 'inline'
+            }
+        }
+
+        function setSelected(value) {
+            this.selected = value
+            console.log(this.selected)
+            if (this.selected === "about") {
+                for (let i = 0; i < abouts.length; i++) {
+                    abouts[i].classList.add("active")
+
+                }
+                jobs.classList.remove("active")
+                apprentice.classList.remove("active")
+                abcontent.style.display = 'block'
+                jbcontent.style.display = 'none'
+                appcontent.style.display = 'none'
+
+            } else if (this.selected === 'jobs') {
+                for (let i = 0; i < abouts.length; i++) {
+                    abouts[i].classList.remove("active")
+                }
+                jobs.classList.add("active")
+                apprentice.classList.remove("active")
+                abcontent.style.display = 'none'
+                jbcontent.style.display = 'block'
+                appcontent.style.display = 'none'
+
+            } else if (this.selected === 'apprentice') {
+                for (let i = 0; i < abouts.length; i++) {
+                    abouts[i].classList.remove("active")
+                }
+                apprentice.classList.add("active")
+                jobs.classList.remove("active")
+                abcontent.style.display = 'none'
+                jbcontent.style.display = 'none'
+                appcontent.style.display = 'block'
+
+            }
+        }
+
+        play.addEventListener("click", () => {
+            vid.play()
+            play.style.display = 'none'
+        })
+        vid.addEventListener("click", () => {
+            vid.pause()
+            play.style.display = 'block'
+        })
+
+
+
+    </script>
+</body>
+
+</html>
