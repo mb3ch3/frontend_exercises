@@ -398,8 +398,9 @@ section div > * {
     height: 3rem;
 }
 .langloc{
+  margin-top: .3rem;
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.5fr 1.5fr;
     justify-content: flex-start;
 }
 .email{
@@ -447,9 +448,14 @@ section div > * {
     color: white;
     background: orangered;
 }
-.email input:nth-child(1){
+.email input:nth-child(1) {
     background: #d3d3d330;
     border: none
+}
+.email input:nth-child(1):focus{
+  background: #d3d3d330;
+    border: 1px solid;
+    outline: none;
 }
 .email input:nth-child(1)::placeholder{
     padding-left: 1rem;
@@ -461,6 +467,23 @@ section div > * {
     color: white;
     font-size: large;
     text-transform: capitalize;
+}
+.langloc select:nth-child(1){
+  background: #d3d3d350;
+  border: none;
+
+  width: 8vw;
+  font-weight: bold;
+  color: black;
+  padding: .3rem .2rem;
+}
+.langloc select:nth-child(2){
+  background: #d3d3d350;
+  border: none;
+  width: 15vw;
+  font-weight: bold;
+  color: black;
+  padding: .3rem .2rem;
 }
 
 
