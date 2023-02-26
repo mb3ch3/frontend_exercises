@@ -19,6 +19,15 @@ body {
 nav {
   padding-top: 1rem;
 }
+.scrolly{
+  transition: all .5s;
+  background: #fffffff5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 3rem 0 1rem 0 ;
+  z-index: 9999;
+}
 .main-nav {
   border-bottom: 2px solid #d3d3d350;
   display: grid;
@@ -26,6 +35,7 @@ nav {
 }
 .sub-nav {
   padding-left: 3rem;
+  padding-top: 1rem;
 }
 .before-drop {
   grid-area: 1/1/2/5;

@@ -156,13 +156,11 @@
 
             </nav>
 
-            <nav>
-                <div class="sub-nav-items sub-nav">
+                <div class="sub-nav-items sub-nav" id="nav2">
                     <div class="nav-item" id="about" onclick="setSelected('about')">about</div>
                     <div class="nav-item" id="jobs" onclick="setSelected('jobs')">jobs</div>
                     <div class="nav-item" id="apprentice" onclick="setSelected('apprentice')">apprenticeships</div>
                 </div>
-            </nav>
         </header>
         <section id="about-content">
             <div>
@@ -410,6 +408,18 @@
         var minus = document.getElementById('icon2')
         var dropdown = document.getElementById('dropdown')
         var hidden_nav = document.getElementById('hidden_nav')
+
+        var subnav = document.getElementById("nav2")
+        window.onscroll = (e)=>{
+            var scroll = window.pageYOffset;
+            if (scroll > 70) {
+                subnav.classList.add("scrolly")
+            } else {
+                subnav.classList.remove("scrolly")
+                
+            }
+        }
+
         function toggleshow() {
             if (dropdown.style.display === 'block') {
                 dropdown.style.display = 'none'
