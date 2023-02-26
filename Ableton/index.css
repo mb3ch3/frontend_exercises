@@ -614,6 +614,30 @@ section div > * {
     grid-template-columns: auto;
   }
   .g4-text {
-    padding: 1rem;
+    padding-inline: 4rem;
+    text-align: center;
   }
+  .footer {
+    margin-top: 5vh;
+    grid-template-rows: auto auto auto;
+    /* grid-row-gap: 1rem;   */
+  }
+  .footer-top-row , .footer-bottom-row{
+    grid-row-gap: 1rem;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;
+}
+.langloc select:nth-child(1),.langloc select:nth-child(2){
+  width: 100%;
+  min-height: 3.5rem;
+}
+.langloc{
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    grid-column-gap: .5rem;
+
+}
+
 }
