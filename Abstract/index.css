@@ -1,0 +1,113 @@
+*{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    display: grid;
+    background: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    color: white;
+    background: #000;
+}
+.nav{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    grid-template-rows: auto;
+    align-items: center;
+    padding: 1rem 6rem;
+}
+.brand-help{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    grid-column-gap: .4rem;
+}
+.brand, .buttons{
+    display: grid;
+    grid-template-columns: auto auto ;
+    align-items: center;
+}
+.logo{
+    font-size: 2.5rem;
+}
+.name{
+    font-size: x-large;
+    margin-bottom: 4px;
+}
+.separator{
+    margin-bottom: 4px;
+    font-size: x-large;
+}
+.help{
+    font-size: larger;
+}
+.submit{
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 0 1rem;
+}
+.signin{
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: blue;
+}
+.hero{
+    background-color: #DADBF1;
+    height: 55vh ;
+    display: grid;
+    width: 100%;
+
+}
+.hero-title{
+    font-size: 4.4rem;
+    font-stretch: ultra-condensed;
+    font-weight: 450;
+    width: 100%;
+    align-self: last baseline;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem 0;
+}
+.hero-search{
+    display: grid;
+}
+.cover{
+    width: 45vw;
+    margin-inline: auto;
+    display: grid;
+}
+.hero-search input{
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    max-height: 4rem;
+    grid-area: 1/1/4/6;
+    margin-bottom: 2.5rem;
+    border: 1px solid;
+}
+.hero-search input::placeholder{
+    font-size: 1.2rem;
+}
+.hero-search input:hover{
+    border: 1px solid rgb(78, 78, 213);   
+}
+.hero-search:hover i{
+    color: rgb(78, 78, 213);
+}
+.hero-search i{
+    padding-top: 0.1rem;
+    padding-right: 1rem;
+    font-size: xx-large;
+    justify-self: flex-end;
+    align-self: center;
+    grid-area: 1/4/1/6;
+}
