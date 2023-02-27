@@ -111,3 +111,52 @@ header{
     align-self: center;
     grid-area: 1/4/1/6;
 }
+.services{
+    width: 85vw;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-top: 10.5rem;
+    
+}
+.service{
+    max-width: 35vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 2rem;
+}
+.service-img{
+    width: 5.5rem;
+    height: auto;
+    justify-self: center;
+}
+.service-content{
+    justify-self: flex-start;
+    display: grid;
+    grid-template-columns: auto;
+}
+.service-title{
+    font-weight: bolder;
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+.service-text{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    justify-self: flex-start;
+
+}
+.service-link{
+    font-size: larger;
+    color: rgb(78, 78, 213);
+    margin-bottom: 2rem;
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+    grid-template-columns: auto auto;
+}
+.service-link span{
+    margin-left: .3rem;
+    line-height: 1rem;
+}
