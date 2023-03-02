@@ -61,6 +61,9 @@ header{
     border-radius: 6px;
     background: blue;
 }
+.right-nav{
+    display: none;
+}
 .hero{
     background-color: #DADBF1;
     height: 55vh ;
@@ -117,7 +120,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    margin-top: 10.5rem;
+    margin-top: 8rem;
     
 }
 .service{
