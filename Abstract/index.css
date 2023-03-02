@@ -188,7 +188,7 @@ footer{
 }
 .footer-item{
     text-transform: capitalize;
-    font-size: large;
+    font-size: medium;
     margin-bottom: .1rem;
 }
 .footer-item:hover{
@@ -214,7 +214,7 @@ footer{
     background: #4C5FD5;
     color: white;
     position: fixed;
-    bottom: 10px;
+    bottom: 15px;
     right: 40px;
     width: 6vw;
     height: 4vh;

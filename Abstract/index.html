@@ -36,8 +36,8 @@
         <div class="cover">
             <div class="hero-title">How can we help?</div>
             <div class="hero-search">
-                <input type="search" name="search" placeholder="Search" id="">
-                <i class='bx bx-right-arrow-alt'></i>
+                <input type="search" name="search" placeholder="Search" id="input">
+                <i class='bx bx-right-arrow-alt'id="search"></i>
             </div>
         </div>
     </div>
@@ -113,7 +113,7 @@
                 <div class="service-title">Abstract support</div>
                 <div class="service-text">Get in touch with a human.</div>
                 <div class="service-link">
-                    Learn More <span>  <i class='bx bx-right-arrow-alt'></i></span>
+                    Learn More <span> <i class='bx bx-right-arrow-alt'></i></span>
                 </div>
             </div>
         </div>
@@ -166,5 +166,19 @@
         Help
     </div>
 </body>
+
+<script>
+    document.getElementById("input")
+        .addEventListener("keyup", function (event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                document.getElementById("search").click();
+            }
+        });
+    document.getElementById("search")
+    .addEventListener("click",(e)=>{
+        alert("you clicked search")
+    })
+</script>
 
 </html>
