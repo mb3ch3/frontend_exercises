@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+    scroll-snap-type: proximity;
+    scroll-snap-points-y: repeat(90vh);
+    scroll-snap-type: y proximity;
+}
+body::-webkit-scrollbar {
+    display: none;
+} 
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.content-col1 {
+    background: white;
+    height: 100vh;
+    display: grid;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.col1-title {
+    background: white;
+    position: fixed;
+    right: 0;
+    left: 0;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-shadow: 2px 1px black;
+    padding: 1rem 0 0 .7rem;
+    width: fit-content;
+}
+
+.col1-footer {
+    position: fixed;
+    left: 0;
+    bottom: 1rem;
+    font-weight: 900;
+    width: 20vw;
+    padding: 0 0 0 1rem;
+    line-height: 1.5;
+    font-size: large;
+
+}
+
+.col1-footer span {
+    font-weight: 400;
+    font-size: small;
+
+}
+
+.policy {
+    font-size: large;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
+
+.content-col2 {
+    background: white;
+    height: 100%;
+    text-align: center;
+
+}
+
+section {
+    padding-top: 5rem;
+    height: 90vh;
+    scroll-snap-align: start;
+
+}
+
+section:nth-child(1) {
+    background: teal;
+}
+
+.magazine {
+    max-width: 22rem;
+    border: .75px solid #00000010;
+    margin-inline: auto;
+    height: 65vh;
+    box-shadow: 10px 10px 15px 5px #00000020;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.issue {
+    background: plum;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    right: -25px;
+    top: 40px;
+    z-index: 99;
+    font-size: small;
+}
+
+.issue-no {
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: large;
+    margin-top: 1.5rem;
+}
+
+.buy {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: medium;
+    margin-top: 1rem;
+    color: palevioletred;
+}
+
+.orin {
+    font-weight: bold;
+    text-transform: lowercase;
+    font-size: medium;
+    margin-top: 1rem;
+    color: black;
+}
+
+.orin span {
+    color: palevioletred;
+
+}
+
+.content-col3 {
+    background: white;
+    height: 100vh;
+    text-align: right;
+    width: auto;
+    position: relative;
+}
+
+.col3-title {
+    background: white;
+    position: fixed;
+    right: 0;
+    width: fit-content;
+    font-weight: bold;
+    font-size: large;
+    padding: 1rem .7rem 0 0;
+}
+
+.col3-nav {
+    position: fixed;
+    right: 0;
+    bottom: 1rem;
+    padding: 0 .7rem 0 0;
+    font-size: large;
+}
+
+.nav-item {
+    margin-bottom: 0.3rem;
+}
+
+.nav-item:hover,
+.policy:hover,
+.col3-title:hover {
+    text-decoration: underline;
+}

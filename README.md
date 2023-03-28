@@ -1,8 +1,8 @@
 # frontend_exercises
 Doing as many exercises as possible from https://www.frontendpractice.com/
 
-Currently: Abstract Lvl.1
+Currently:  Backstage Talks L1
 
 ## completed
-1. Ableton
-2. 
+1. Ableton L1
+2. Abstract L1
