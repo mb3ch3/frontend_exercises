@@ -11,10 +11,10 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>Backstage Talks Magazzine</title>
+    <title>Backstage Talks Magazine</title>
 </head>
 
-<body>
+<body id="body">
     <div class="content">
         <div class="content-col1">
             <div class="col1-title">backstage talks</div>
@@ -41,8 +41,8 @@
                     </div>
                 </div>
                 <div class="issue-no">Issue #6</div>
-                <div class="buy">buy here</div>
-                <div class="orin">or in <span>selected stores</span> .</div>
+                <div class="buy one">buy here</div>
+                <div class="orin ">or in <span style="color: palevioletred;">selected stores</span> .</div>
             </section>
 
             <!-- magazine 1 -->
@@ -52,72 +52,71 @@
                     soluta fuga fugiat velit asperiores consequatur eligendi facere ratione nulla, omnis reiciendis sed
                     perspiciatis, laborum est corporis.
                     <div class="issue">
-                        issue6
+                        issue5
                     </div>
                 </div>
-                <div class="issue-no">Issue #6</div>
+                <div class="issue-no">Issue #5</div>
                 <div class="buy">buy here</div>
                 <div class="orin">or in <span>selected stores</span> .</div>
             </section>
 
             <!-- magazine 1 -->
             <section class="magholder">
-                <div class="magazine">
+                <div class="magazine" id="third">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim sint distinctio necessitatibus
                     soluta fuga fugiat velit asperiores consequatur eligendi facere ratione nulla, omnis reiciendis sed
                     perspiciatis, laborum est corporis.
                     <div class="issue">
-                        issue6
+                        issue4
                     </div>
                 </div>
-                <div class="issue-no">Issue #6</div>
+                <div class="issue-no">Issue #4</div>
                 <div class="buy">buy here</div>
                 <div class="orin">or in <span>selected stores</span> .</div>
             </section>
 
             <!-- magazine 1 -->
             <section class="magholder">
-                <div class="magazine">
+                <div class="magazine" id="fourth">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim sint distinctio necessitatibus
                     soluta fuga fugiat velit asperiores consequatur eligendi facere ratione nulla, omnis reiciendis sed
                     perspiciatis, laborum est corporis.
                     <div class="issue">
-                        issue6
+                        issue3
                     </div>
                 </div>
-                <div class="issue-no">Issue #6</div>
+                <div class="issue-no">Issue #3</div>
                 <div class="buy">buy here</div>
                 <div class="orin">or in <span>selected stores</span> .</div>
             </section>
 
             <!-- magazine 1 -->
             <section class="magholder">
-                <div class="magazine">
+                <div class="magazine" id="fifth">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim sint distinctio necessitatibus
                     soluta fuga fugiat velit asperiores consequatur eligendi facere ratione nulla, omnis reiciendis sed
                     perspiciatis, laborum est corporis.
                     <div class="issue">
-                        issue6
+                        issue2
                     </div>
                 </div>
-                <div class="issue-no">Issue #6</div>
+                <div class="issue-no">Issue #2</div>
                 <div class="buy">buy here</div>
                 <div class="orin">or in <span>selected stores</span> .</div>
             </section>
 
             <!-- magazine 1 -->
             <section class="magholder">
-                <div class="magazine">
+                <div class="magazine" id="sixth">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor enim sint distinctio necessitatibus
                     soluta fuga fugiat velit asperiores consequatur eligendi facere ratione nulla, omnis reiciendis sed
                     perspiciatis, laborum est corporis.
                     <div class="issue">
-                        issue6
+                        issue1
                     </div>
                 </div>
-                <div class="issue-no">Issue #6</div>
-                <div class="buy">buy here</div>
-                <div class="orin">or in <span>selected stores</span> .</div>
+                <div class="issue-no">Issue #1 is sold out.</div>
+                <div class="orin">If you are lucky, you may get the last pieces in <span>selected stores</span> .</div>
             </section>
 
 
@@ -125,22 +124,88 @@
         <div class="content-col3">
             <div class="col3-title">info@backstagetalks.com</div>
             <div class="col3-nav">
-                <div class="nav-item">Issue #6</div>
-                <div class="nav-item">Issue #5</div>
-                <div class="nav-item">Issue #4</div>
-                <div class="nav-item">Issue #3</div>
-                <div class="nav-item">Issue #2</div>
-                <div class="nav-item">Issue #1</div>
+                <div class="nav-item" id="iss6">Issue #6</div>
+                <div class="nav-item" id="iss5">Issue #5</div>
+                <div class="nav-item" id="iss4">Issue #4</div>
+                <div class="nav-item" id="iss3">Issue #3</div>
+                <div class="nav-item" id="iss2">Issue #2</div>
+                <div class="nav-item" id="iss1">Issue #1</div>
             </div>
         </div>
     </div>
 
 
     <script>
-        var firstsec = document.getElementById('first');
-        var secondsec = document.getElementById('second');
-       
-		
+        var firstsec = document.getElementById('body');
+        var sec1 = document.getElementById("first")
+        var sec2 = document.querySelector("#second")
+        var sec3 = document.querySelector("#third")
+        var sec4 = document.querySelector("#fourth")
+        var sec5 = document.querySelector("#fifth")
+        var sec6 = document.querySelector("#sixth")
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+        var interval = 50;
+        var timer = window.setInterval(()=>{
+            if (isInViewport(sec2)) {
+                firstsec.style.background = "#00C1B5"
+                document.getElementById('iss5').classList.add("active")
+                document.getElementById('iss6').classList.remove("active")
+                document.getElementById('iss4').classList.remove("active")
+                document.getElementById('iss3').classList.remove("active")
+                document.getElementById('iss2').classList.remove("active")
+                document.getElementById('iss1').classList.remove("active")
+            } else if (isInViewport(sec3)) {
+                firstsec.style.background = "orange"
+                document.getElementById('iss4').classList.add("active")
+                document.getElementById('iss5').classList.remove("active")
+                document.getElementById('iss6').classList.remove("active")
+                document.getElementById('iss3').classList.remove("active")
+                document.getElementById('iss2').classList.remove("active")
+                document.getElementById('iss1').classList.remove("active")
+            } else if (isInViewport(sec4)) {
+                firstsec.style.background = "#FFBE00"
+                document.getElementById('iss3').classList.add("active")
+                document.getElementById('iss5').classList.remove("active")
+                document.getElementById('iss4').classList.remove("active")
+                document.getElementById('iss6').classList.remove("active")
+                document.getElementById('iss2').classList.remove("active")
+                document.getElementById('iss1').classList.remove("active")
+            } else if (isInViewport(sec5)) {
+                firstsec.style.background = "#1D3FBB"
+                document.getElementById('iss2').classList.add("active")
+                document.getElementById('iss5').classList.remove("active")
+                document.getElementById('iss4').classList.remove("active")
+                document.getElementById('iss3').classList.remove("active")
+                document.getElementById('iss6').classList.remove("active")
+                document.getElementById('iss1').classList.remove("active")
+            } else if (isInViewport(sec6)) {
+                firstsec.style.background = "#E30512"
+                document.getElementById('iss1').classList.add("active")
+                document.getElementById('iss5').classList.remove("active")
+                document.getElementById('iss4').classList.remove("active")
+                document.getElementById('iss3').classList.remove("active")
+                document.getElementById('iss2').classList.remove("active")
+                document.getElementById('iss6').classList.remove("active")
+            } else if (isInViewport(sec1)){
+                firstsec.style.background = "#FFFFFF"
+                document.getElementById('iss6').classList.add("active")
+                document.getElementById('iss5').classList.remove("active")
+                document.getElementById('iss4').classList.remove("active")
+                document.getElementById('iss3').classList.remove("active")
+                document.getElementById('iss2').classList.remove("active")
+                document.getElementById('iss1').classList.remove("active")
+            } else {
+                firstsec.style.background = "transparent"
+            }
+        },interval)        
     </script>
 </body>
 
